@@ -28,3 +28,15 @@
 //   var $e = $(this);
 //   myFirebaseRef.child( $e.data("key") ).remove();
 // });
+//
+
+
+
+var app = angular.module("sampleApp", ["firebase"]);
+
+app.controller("MainCtrl", function($scope, $firebaseArray) {
+  var ref = new Firebase("https://aoetnhuhaoeu.firebaseio.com");
+  $scope.items = $firebaseArray(ref);
+});
+
+
